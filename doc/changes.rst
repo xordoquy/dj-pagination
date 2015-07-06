@@ -1,6 +1,13 @@
 Version History
 ***************
 
+.. _version_2_1_0:
+
+Version 2.1.0
+=============
+
+Collected changes from various contributors. Thank you very much for your
+ongoing support!
 
 .. _version_2_0_2:
 
