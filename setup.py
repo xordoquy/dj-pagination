@@ -45,7 +45,7 @@ setup(
     long_description=open("README.rst").read(),
     keywords='pagination,django',
     url='https://github.com/pydanny/dj-pagination',
-    test_suite="dj_django_pagination.tests.runner.runtests",
+    test_suite="dj_pagination.tests.runner.runtests",
     license='BSD',
     packages=find_packages(),
     classifiers=[
