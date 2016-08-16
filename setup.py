@@ -36,7 +36,7 @@ from setuptools import setup, find_packages
 os.environ['DJANGO_SETTINGS_MODULE'] = 'dj_pagination.tests.settings'
 
 setup(
-    name='dj_pagination',
+    name='dj-pagination',
     # Magic version handling with versiontools
     version="2.0.4",
     author='Daniel Roy Greenfeld',
