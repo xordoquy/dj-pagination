@@ -39,14 +39,9 @@ os.environ['DJANGO_SETTINGS_MODULE'] = 'dj_pagination.tests.settings'
 version = "2.0.4"
 
 if sys.argv[-1] == 'publish':
-    try:
-        import wheel
-        print("Wheel version: ", wheel.__version__)
-    except ImportError:
-        print('Wheel library missing. Please run "pip install wheel"')
-        sys.exit()
-    os.system('python setup.py sdist upload')
-    os.system('python setup.py bdist_wheel upload')
+    os.system('python install -U twine wheel')
+    os.system('python setup.py sdist bdist_wheel')
+    os.system('twine upload dist/*')
     sys.exit()
 
 if sys.argv[-1] == 'tag':
