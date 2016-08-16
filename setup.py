@@ -32,8 +32,26 @@
 
 import os
 from setuptools import setup, find_packages
+import sys
 
 os.environ['DJANGO_SETTINGS_MODULE'] = 'dj_pagination.tests.settings'
+
+if sys.argv[-1] == 'publish':
+    try:
+        import wheel
+        print("Wheel version: ", wheel.__version__)
+    except ImportError:
+        print('Wheel library missing. Please run "pip install wheel"')
+        sys.exit()
+    os.system('python setup.py sdist upload')
+    os.system('python setup.py bdist_wheel upload')
+    sys.exit()
+
+if sys.argv[-1] == 'tag':
+    print("Tagging the version on github:")
+    os.system("git tag -a %s -m 'version %s'" % (version, version))
+    os.system("git push --tags")
+    sys.exit()
 
 setup(
     name='dj-pagination',
