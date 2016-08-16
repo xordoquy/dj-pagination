@@ -8,5 +8,5 @@ DATABASES = {
 SECRET_KEY = 'fake-key'
 
 INSTALLED_APPS = (
-    'linaro_django_pagination',
+    'dj_pagination',
 )

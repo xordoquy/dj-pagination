@@ -6,7 +6,7 @@ Installation
 Prerequisites
 ^^^^^^^^^^^^^
 
-This package requires django 1.2. It is not tested on earlier versions and may
+This package requires django 1.8+. It is not tested on earlier versions and may
 not work properly there.
 
 To build the documentation from source you will need sphinx.
@@ -15,25 +15,6 @@ Installation Options
 ^^^^^^^^^^^^^^^^^^^^
 
 There are several installation options available:
-
-Using Ubuntu PPAs
------------------
-
-For Ubuntu 10.04 onward there is a stable PPA (personal package archive):
-
-* ppa:linaro-validation/ppa
-
-To add a ppa to an Ubuntu system use the add-apt-repository command::
-
-    sudo add-apt-repository ppa:linaro-validation/ppa
-
-After you add the PPA you need to update your package cache::
-
-    sudo apt-get update
-
-Finally you can install the package, it is called `python-versiontools`::
-
-    sudo apt-get install python-linaro-django-pagination
 
 
 Using Python Package Index
@@ -57,7 +38,7 @@ tarball and run::
 
 You can pass ``--user`` if you prefer to do a local (non system-wide) installation.
 
-..  note:: 
+..  note::
 
     To install from source you will need distutils (replacement of setuptools)
     They are typically installed on any Linux system with python but on Windows

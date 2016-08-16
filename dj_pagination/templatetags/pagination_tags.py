@@ -1,5 +1,6 @@
 # Copyright (c) 2008, Eric Florenzano
 # Copyright (c) 2010, 2011 Linaro Limited
+# Copyright (c) 2016 Daniel Roy Greenfeld
 # All rights reserved.
 #
 # Redistribution and use in source and binary forms, with or without
@@ -51,7 +52,7 @@ from django.template.loader import select_template
 from django.utils.text import unescape_string_literal
 
 # TODO, import this normally later on
-from linaro_django_pagination.settings import *
+from dj_pagination.settings import *
 
 
 def do_autopaginate(parser, token):

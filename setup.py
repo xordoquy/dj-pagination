@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 # Copyright (c) 2008, Eric Florenzano
 # Copyright (c) 2010, 2011 Linaro Limited
+# Copyright (c) 2016, Daniel Roy Greenfeld
 # All rights reserved.
 #
 # Redistribution and use in source and binary forms, with or without
@@ -32,19 +33,19 @@
 import os
 from setuptools import setup, find_packages
 
-os.environ['DJANGO_SETTINGS_MODULE'] = 'linaro_django_pagination.tests.settings'
+os.environ['DJANGO_SETTINGS_MODULE'] = 'dj_pagination.tests.settings'
 
 setup(
-    name='linaro-django-pagination',
+    name='dj_pagination',
     # Magic version handling with versiontools
-    version=":versiontools:linaro_django_pagination:__version__",
-    author='Zygmunt Krynicki',
-    author_email='zygmunt.krynicki@linaro.org',
-    description="linaro-django-pagination",
+    version="2.0.4",
+    author='Daniel Roy Greenfeld',
+    author_email='pydanny@gmail.com',
+    description="Django + Pagination Made Easy",
     long_description=open("README.rst").read(),
     keywords='pagination,django',
-    url='https://github.com/zyga/django-pagination',
-    test_suite="linaro_django_pagination.tests.runner.runtests",
+    url='https://github.com/pydanny/dj-pagination',
+    test_suite="dj_django_pagination.tests.runner.runtests",
     license='BSD',
     packages=find_packages(),
     classifiers=[
@@ -54,13 +55,14 @@ setup(
         "Intended Audience :: Developers",
         "License :: OSI Approved :: BSD License",
         "Operating System :: OS Independent",
-        "Programming Language :: Python :: 2.6",
         "Programming Language :: Python :: 2.7",
         "Programming Language :: Python :: 3",
         "Programming Language :: Python :: 3.3",
+        "Programming Language :: Python :: 3.4",
+        "Programming Language :: Python :: 3.5",
     ],
     setup_requires=[
-        'versiontools >= 1.3.1'
+        'django >= 1.8.0'
     ],
     include_package_data=True,
 )
