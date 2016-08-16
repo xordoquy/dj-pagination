@@ -36,6 +36,8 @@ import sys
 
 os.environ['DJANGO_SETTINGS_MODULE'] = 'dj_pagination.tests.settings'
 
+version = "2.0.4"
+
 if sys.argv[-1] == 'publish':
     try:
         import wheel
@@ -56,7 +58,7 @@ if sys.argv[-1] == 'tag':
 setup(
     name='dj-pagination',
     # Magic version handling with versiontools
-    version="2.0.4",
+    version=version,
     author='Daniel Roy Greenfeld',
     author_email='pydanny@gmail.com',
     description="Django + Pagination Made Easy",
