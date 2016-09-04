@@ -5,8 +5,8 @@ dj-pagination
 .. image:: https://travis-ci.org/pydanny/dj-pagination.svg?branch=master
     :target: https://travis-ci.org/pydanny/dj-pagination
 
-.. image:: https://codecov.io/repos/zyga/django-pagination/badge.svg?branch=master&service=github
-    :target: https://coveralls.io/github/zyga/django-pagination?branch=master
+.. image:: http://codecov.io/github/pydanny/dj-pagination/badge.svg?branch=master&service=github
+    :target: https://codecov.io/github/pydanny/django-pagination?branch=master
 
 
 About the fork
