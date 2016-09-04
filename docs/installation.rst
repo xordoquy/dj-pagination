@@ -25,3 +25,12 @@ Index <http://http://pypi.python.org>`_. You can install it if you have `pip
 <http://pip.openplans.org/>`_ tool using just one line::
 
     pip install dj-pagination
+
+Installing the development version
+------------------------------------
+
+::
+
+    git clone git@github.com:pydanny/dj-pagination.git
+    cd dj-pagination
+    python setup.py develop
