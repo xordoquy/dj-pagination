@@ -1,6 +1,8 @@
 Version History
 ***************
 
+.. _version_2_0_4:
+
 Version 2.0.4
 =============
 
