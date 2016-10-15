@@ -8,6 +8,7 @@ env:
   matrix:
     - DJANGO_VERSION=1.8
     - DJANGO_VERSION=1.9
+    - DJANGO_VERSION=1.10
 install:
   - pip install 'coverage<4' # coverage>=4 has issues with python3
   - pip install -q Django==$DJANGO_VERSION coveralls
@@ -19,3 +20,5 @@ matrix:
   exclude:
     - python: "3.3"
       env: DJANGO_VERSION=1.9 # ImportError: cannot import name find_spec
+    - python: "3.3"
+      env: DJANGO_VERSION=1.10

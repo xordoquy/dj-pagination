@@ -10,3 +10,10 @@ SECRET_KEY = 'fake-key'
 INSTALLED_APPS = (
     'dj_pagination',
 )
+
+TEMPLATES = [
+    {
+        'BACKEND': 'django.template.backends.django.DjangoTemplates',
+        'APP_DIRS': True,
+    }
+]
