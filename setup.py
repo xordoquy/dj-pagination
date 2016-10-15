@@ -36,7 +36,7 @@ import sys
 
 os.environ['DJANGO_SETTINGS_MODULE'] = 'dj_pagination.tests.settings'
 
-version = "2.0.4"
+version = "2.1.0"
 
 if sys.argv[-1] == 'publish':
     os.system('python install -U twine wheel')
@@ -65,6 +65,9 @@ setup(
     packages=find_packages(),
     classifiers=[
         "Development Status :: 4 - Beta",
+        "Framework :: Django :: 1.8",
+        "Framework :: Django :: 1.9",
+        "Framework :: Django :: 1.9",
         "Environment :: Web Environment",
         "Framework :: Django",
         "Intended Audience :: Developers",
