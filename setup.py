@@ -36,7 +36,7 @@ import sys
 
 os.environ['DJANGO_SETTINGS_MODULE'] = 'dj_pagination.tests.settings'
 
-version = "2.1.0"
+version = "2.2.0"
 
 if sys.argv[-1] == 'publish':
     os.system('pip install -U twine wheel')
