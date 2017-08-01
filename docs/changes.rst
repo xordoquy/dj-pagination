@@ -1,6 +1,13 @@
 Version History
 ***************
 
+.. _version_2_3_0:
+
+Version 2.3.0
+=============
+
+Add request object to context
+
 .. _version_2_0_4:
 
 Version 2.0.4
