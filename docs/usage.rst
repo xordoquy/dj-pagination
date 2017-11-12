@@ -24,10 +24,12 @@ installation, which is covered in :ref:`installation`.)
 2. Install the pagination middleware.  Your settings file might look something
    like::
 
-       MIDDLEWARE_CLASSES = (
+       MIDDLEWARE = (
            # ...
            'dj_pagination.middleware.PaginationMiddleware',
        )
+   
+   or MIDDLEWARE_CLASSES for Django <1.10.
 
 3. If it's not already added in your setup, add the request context processor.
    Note that context processors are set by default implicitly, so to set them
