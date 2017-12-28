@@ -36,7 +36,7 @@ import sys
 
 os.environ['DJANGO_SETTINGS_MODULE'] = 'dj_pagination.tests.settings'
 
-version = "2.3.0"
+version = "2.3.1"
 
 if sys.argv[-1] == 'publish':
     os.system('pip install -U twine wheel')
@@ -81,9 +81,8 @@ setup(
         "Programming Language :: Python :: 3.5",
         "Programming Language :: Python :: 3.6",
     ],
-    extras_require={
-        ':python_version < "3.0"': ['Django>=1.8,<2.0'],
-        ':python_version >= "3.0"': ['Django>=1.8'],
-    },
+    setup_requires=[
+        'django >= 1.8.0'
+    ],
     include_package_data=True,
 )
