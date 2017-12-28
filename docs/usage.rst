@@ -1,10 +1,10 @@
 .. _usage:
 
 Usage
-*****
+=====
 
 How to use dj-pagination
-===================================
+------------------------
 
 ``dj-pagination`` allows for easy HTML-based pagination without modifying
 your views.
@@ -15,10 +15,10 @@ installation, which is covered in :ref:`installation`.)
 1. List this application in the ``INSTALLED_APPS`` portion of your settings
    file.  Your settings file might look something like::
 
-       INSTALLED_APPS = (
-           # ...
-           'dj_pagination',
-       )
+        INSTALLED_APPS = (
+            # ...
+            'dj_pagination',
+        )
 
 
 2. Install the pagination middleware.  Your settings file might look something
@@ -28,7 +28,7 @@ installation, which is covered in :ref:`installation`.)
            # ...
            'dj_pagination.middleware.PaginationMiddleware',
        )
-   
+
    or MIDDLEWARE_CLASSES for Django <1.10.
 
 3. If it's not already added in your setup, add the request context processor.
@@ -42,23 +42,23 @@ installation, which is covered in :ref:`installation`.)
         "django.core.context_processors.media",
         "django.core.context_processors.request")
 
-4. Add this line at the top of your template to load the pagination tags:
+4. Add this line at the top of your template to load the pagination tags::
 
-       {% load pagination_tags %}
+        {% load pagination_tags %}
 
 
 5. Decide on a variable that you would like to paginate, and use the
    autopaginate tag on that variable before iterating over it.  This could
    take one of two forms (using the canonical ``object_list`` as an example
-   variable):
+   variable)::
 
-       {% autopaginate object_list %}
+        {% autopaginate object_list %}
 
    This assumes that you would like to have the default 20 results per page.
    If you would like to specify your own amount of results per page, you can
-   specify that like so:
+   specify that like so::
 
-       {% autopaginate object_list 10 %}
+        {% autopaginate object_list 10 %}
 
    Note that this replaces ``object_list`` with the list for the current page, so
    you can iterate over the ``object_list`` like you normally would.
@@ -73,9 +73,9 @@ installation, which is covered in :ref:`installation`.)
 
 
 6. Now you want to display the current page and the available pages, so
-   somewhere after having used autopaginate, use the paginate inclusion tag:
+   somewhere after having used autopaginate, use the paginate inclusion tag::
 
-       {% paginate %}
+        {% paginate %}
 
    This does not require any arguments, but does assume that you have already
    called autopaginate, so make sure to do so first.
@@ -85,7 +85,7 @@ That's it!  You have now paginated ``object_list`` and given users of the site
 a way to navigate between the different pages--all without touching your views.
 
 Custom pagination templates
-===========================
+---------------------------
 
 By default the objects will be paginated using a helper template
 "pagination/pagination.html". You can change this with an argument to
@@ -93,7 +93,7 @@ By default the objects will be paginated using a helper template
 
 In general the full syntax is::
 
-        paginate [using "TEMPLATE"]
+    paginate [using "TEMPLATE"]
 
 For example, to paginate posts on a hypothetical blog page you could use
 something like this::
@@ -108,7 +108,7 @@ see the blocks it defines that you could customize.
 
 
 Multiple paginations per page
-=============================
+-----------------------------
 
 You can use autopaginate/paginate multiple times in the same template. The only
 requirement is to call autopaginate before calling paginate. That is, paginate
@@ -116,7 +116,7 @@ acts on the most recent call to autopaginate.
 
 
 A Note About Uploads
-====================
+--------------------
 
 It is important, when using dj-pagination in conjunction with file
 uploads, to be aware of when ``request.page`` is accessed.  As soon as
@@ -126,7 +126,7 @@ the request object as late as possible in your views.
 
 
 Optional Settings
-=================
+-----------------
 
 In dj-pagination, there are no required settings.  There are,
 however, a small set of optional settings useful for changing the default
@@ -145,9 +145,8 @@ behavior of the pagination tags.  Here's an overview:
 
 ``PAGINATION_DEFAULT_ORPHANS``
     The number of orphans allowed.  According to the Django documentation,
-    orphans are defined as::
-
-        The minimum number of items allowed on the last page, defaults to zero.
+    orphans are defined as "The minimum number of items allowed on the last
+    page, defaults to zero."
 
 ``PAGINATION_INVALID_PAGE_RAISES_404``
     Determines whether an invalid page raises an ``Http404`` or just sets the
@@ -172,5 +171,5 @@ behavior of the pagination tags.  Here's an overview:
     next page. Defaults to False.
 
 ``PAGINATION_DISABLE_LINK_FOR_FIRST_PAGE``
-    if set to ``False``, the first page will have ``?page=1`` link suffix in pagination displayed, otherwise is omitted.
-    Defaults to True.
+    If set to ``False``, the first page will have ``?page=1`` link suffix in
+    pagination displayed, otherwise is omitted. Defaults to True.
