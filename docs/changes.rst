@@ -1,6 +1,14 @@
 Version History
 ***************
 
+
+.. _version_2_3_2:
+
+Version 2.3.2
+==============
+
+Fixed extras_require for py2/3 differences
+
 .. _version_2_3_1:
 
 Version 2.3.1
